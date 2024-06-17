@@ -6,20 +6,20 @@
     <title>My weirdest Website</title> <!-- wird dann oben so angezeigt beim Tab -->
 
     <script language="JavaScript">
-    fetch('https://cors-anywhere.herokuapp.com/https://api.github.com/repos/whicu113/whicu11312/contents/password.txt')
-        .then(response => response.json())
-        .then(data => {
-          const fileContent = atob(data.content);
-          const userPassword = prompt('Bitte geben Sie Ihr Passwort ein, um diese Seite anzuzeigen!', '');
-
-          if (userPassword === fileContent.trim()) {
-            alert('Passwort korrekt! Klicken Sie auf OK, um einzutreten!');
-          } else {
-            window.location.href = "https://whicu111.netlify.app/Seite2";
-          }
-        })
-        .catch(error => console.error('Ein Fehler ist aufgetreten:', error));
-    </script>
+      fetch('https://yacdn.org/proxy/https://api.github.com/repos/whicu113/whicu11312/contents/password.txt')
+         .then(response => response.json())
+         .then(data => {
+           const fileContent = atob(data.content);
+           const userPassword = prompt('Bitte geben Sie Ihr Passwort ein, um diese Seite anzuzeigen!', '');
+ 
+           if (userPassword === fileContent.trim()) {
+             alert('Passwort korrekt! Klicken Sie auf OK, um einzutreten!');
+           } else {
+             window.location.href = "https://whicu111.netlify.app/Seite2";
+           }
+         })
+         .catch(error => console.error('Ein Fehler ist aufgetreten:', error));
+     </script>
   </head>
   <body>
     <h1>Websitee</h1> <!-- h1 fett, h2 kleiner, h3 kleiner, usw. -->
