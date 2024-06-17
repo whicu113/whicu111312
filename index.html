@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Braucht man auch damit es auf allen Geräten funktioniert vom Layout her -->
     <title>My weirdest Website</title> <!-- wird dann oben so angezeigt beim Tab -->
 
-    <script language="JavaScript">   <!-- Javascript -->
-      <!--hide
+    <script language="JavaScript">
+      function caesarCipher(text, shift) {
+        return text.split('').map(function(c) {
+          return String.fromCharCode((c.charCodeAt(0) - 97 + shift) % 26 + 97);
+        }).join('');
+      }
 
-      var password;       <!-- macht Variable Passwort-->
-      var pass1="187";    <!-- Setzt Variable Passwort zu Esel und macht dies somit das Passwort-->
+      var pass1 = "vzgd";
 
-      password=prompt('Please enter your password to view this page!',' ');   
+      var password = prompt('', '');
 
-      if (password==pass1)
-        alert('Password Correct! Click OK to enter!');
-      else {
-         window.location.href = "https://whicu111.netlify.app/Seite2";
-
+      if (caesarCipher(password, -10) === pass1) {
+        alert('');
+      } else {
+        window.location.href = "https://whicu111.netlify.app/Seite2";
       }
     </script>
   </head>
