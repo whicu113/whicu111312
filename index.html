@@ -6,7 +6,7 @@
     <title>My weirdest Website</title> <!-- wird dann oben so angezeigt beim Tab -->
 
     <script language="JavaScript">
-      fetch('https://api.github.com/repos/whicu113/whicu11312/contents/<passwort.txt>')
+     fetch('https://api.github.com/repos/whicu113/whicu11312/contents/passwort.txt')
         .then(response => response.json())
         .then(data => {
           const fileContent = atob(data.content);
