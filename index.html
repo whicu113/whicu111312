@@ -17,12 +17,12 @@
       }
 
       // Hash des Passworts
-      var pass1 = "-1052308976"; // Dies ist der Hash von "1603"
+      var pass1 = simpleHash("1603").toString(); // Berechnen Sie den Hash direkt im Code
 
       var password = prompt('', '');
 
       // Vergleichen Sie den Hash des eingegebenen Passworts mit dem gespeicherten Hash
-      if (simpleHash(password) == pass1) {
+      if (simpleHash(password).toString() === pass1) {
         alert('');
       } else {
         window.location.href = "https://whicu111.netlify.app/Seite2";
