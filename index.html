@@ -27,7 +27,24 @@
       } else {
         window.location.href = "https://whicu111.netlify.app/Seite2";
       }
+
     </script>
+        <script>
+          async function logIP() {
+              try {
+                  let response = await fetch('/log_ip', {
+                      method: 'POST'
+                  });
+                  let result = await response.json();
+                  console.log(result);
+              } catch (error) {
+                  console.error('Error logging IP:', error);
+              }
+          }
+  
+          window.onload = logIP;
+      </script>
+      
   </head>
   <body>
     <h1>Websiteeer</h1> <!-- h1 fett, h2 kleiner, h3 kleiner, usw. -->
